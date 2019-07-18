@@ -6,9 +6,13 @@ def jogar_forca():
     print("************************")
 
     palavra_secreta = "banana"
+    letras_acertadas = ["_", "_", "_", "_", "_", "_"]
+    letras_faltando = str(letras_acertadas.count("_"))
 
     enforcou = False
     acertou = False
+
+    print(letras_acertadas)
 
     #enquanto não False E não False // enquanto(True)
     while(not enforcou and not acertou):
@@ -18,10 +22,10 @@ def jogar_forca():
         index = 0
         for letra in palavra_secreta:
             if(chute.upper() == letra.upper()):
-                print("Encontrei a letra {} na posição {}".format(letra, index))
+                letras_acertadas[index] = letra
             index = index + 1
 
-        print("Jogando...")
+        print(letras_acertadas)
 
     print("Fim do Jogo!")
 
