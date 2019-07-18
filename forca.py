@@ -13,10 +13,11 @@ def jogar_forca():
     #enquanto não False E não False // enquanto(True)
     while(not enforcou and not acertou):
         chute = input("Qual a letra? ")
+        chute = chute.strip()
 
         index = 0
         for letra in palavra_secreta:
-            if(chute == letra):
+            if(chute.upper() == letra.upper()):
                 print("Encontrei a letra {} na posição {}".format(letra, index))
             index = index + 1
 
